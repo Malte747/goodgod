@@ -11,6 +11,7 @@ public class ConnectionManager : MonoBehaviour
 
     [SerializeField] private TMP_InputField connectionInput; // UI-Element
     [SerializeField] private Button hostButton;
+    [SerializeField] private Button connectButton;
 
     private FishySteamworks.FishySteamworks FishySteamworks => FishySteamManager.Instance?.fishySteamworks;
 
@@ -54,11 +55,25 @@ public class ConnectionManager : MonoBehaviour
             {
                 hostButton.onClick.RemoveAllListeners(); // Verhindert doppelte Events
                 hostButton.onClick.AddListener(StartHost);
-                Debug.Log("HostButton wieder verbunden!");
+                
             }
             else
             {
                 Debug.LogWarning("Host Button nicht gefunden!");
+            }
+        }
+        if (connectButton == null)
+        {
+            connectButton = GameObject.Find("Connectbutton")?.GetComponent<Button>();
+            if (connectButton != null)
+            {
+                connectButton.onClick.RemoveAllListeners(); // Verhindert doppelte Events
+                connectButton.onClick.AddListener(StartConnection);
+             
+            }
+            else
+            {
+                Debug.LogWarning("connectButton Button nicht gefunden!");
             }
         }
     }
@@ -103,5 +118,11 @@ public class ConnectionManager : MonoBehaviour
     {
         Debug.Log(instance._hostHex + " ID des Spielers");
         return instance._hostHex;
+    }
+
+        public static void LoadMainSceneIfKicked()
+    {
+        Debug.Log("Lade MainConnection Szene...");
+        SceneManager.LoadScene("MainConnection");
     }
 }

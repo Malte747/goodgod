@@ -5,18 +5,6 @@ using FishNet.Transporting;
 
 public class DisconnectManager : MonoBehaviour
 {
-    public static DisconnectManager Instance;
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     public void Disconnect()
     {
@@ -43,7 +31,6 @@ public class DisconnectManager : MonoBehaviour
             Debug.LogWarning("Spieler ist weder Host noch Client. Keine Verbindung aktiv.");
         }
 
-        // Lokal zur "MainConnection" Szene wechseln
         LoadMainConnectionScene();
     }
 
