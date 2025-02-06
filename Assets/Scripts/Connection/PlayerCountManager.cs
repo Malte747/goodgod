@@ -24,7 +24,7 @@ public class PlayerCountManager : NetworkBehaviour
 
           
             PlayerCountVariable.Instance?.DecreasePlayerCount();
-            ConnectionManager.LoadMainSceneIfKicked();
+        //    ConnectionManager.LoadMainSceneIfKicked();
 
     }
 }
