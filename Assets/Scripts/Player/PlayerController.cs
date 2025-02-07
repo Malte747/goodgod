@@ -24,7 +24,7 @@ public class PlayerController : NetworkBehaviour
  
     [SerializeField]
     private float cameraYOffset = 0.4f;
-    private Camera playerCamera;
+    [SerializeField] private Camera playerCamera;
  
  
     public override void OnStartClient()
@@ -32,7 +32,7 @@ public class PlayerController : NetworkBehaviour
         base.OnStartClient();
         if (base.IsOwner)
         {
-            playerCamera = Camera.main;
+            // playerCamera = Camera.main;
             playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + cameraYOffset, transform.position.z);
             playerCamera.transform.SetParent(transform);
         }
