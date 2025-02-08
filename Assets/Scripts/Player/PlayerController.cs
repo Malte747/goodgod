@@ -4,7 +4,7 @@ using UnityEngine;
 using FishNet.Connection;
 using FishNet.Object;
  
-//This is made by Bobsi Unity - Youtube
+
 public class PlayerController : NetworkBehaviour
 {
     [Header("Base setup")]

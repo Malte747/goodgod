@@ -398,6 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5497837216490445985}
   - component: {fileID: 571648548974725141}
+  - component: {fileID: 3613905817552139333}
   - component: {fileID: 3265530294378493167}
   - component: {fileID: 2130926915744306224}
   - component: {fileID: 7165920377728065559}
@@ -455,6 +456,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3613905817552139333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4900900ce0bd3d84c8af61f2649486ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 0}
+  playerRole: God
 --- !u!114 &3265530294378493167
 MonoBehaviour:
   m_ObjectHideFlags: 0
