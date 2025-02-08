@@ -30,6 +30,14 @@ public class PlayerMovement : NetworkBehaviour
             playerCamera.gameObject.SetActive(false);
             Destroy(playerCamera.GetComponent<AudioListener>());
         }
+        if (IsOwner)
+        {
+        Transform playerModel = transform.Find("Body"); // Ersetze "PlayerModel" mit dem Namen deines Modells
+        if (playerModel != null)
+        {
+            playerModel.gameObject.SetActive(false);
+        }
+        }
     }
 
     void Start()
