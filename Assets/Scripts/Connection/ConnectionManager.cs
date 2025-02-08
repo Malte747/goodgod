@@ -8,6 +8,7 @@ public class ConnectionManager : MonoBehaviour
 {
     private static ConnectionManager instance;
     private string _hostHex;
+    public int currentPlayerCount;
 
     [SerializeField] private TMP_InputField connectionInput; // UI-Element
     [SerializeField] private Button hostButton;
@@ -124,5 +125,10 @@ public class ConnectionManager : MonoBehaviour
     {
         Debug.Log("Lade MainConnection Szene...");
         SceneManager.LoadScene("MainConnection");
+    }
+
+    public void SetCurrentPlayerCount(int count)
+    {
+        currentPlayerCount = count;
     }
 }

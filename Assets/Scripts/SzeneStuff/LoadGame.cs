@@ -8,4 +8,15 @@ public class LoadGame : NetworkBehaviour
     {
         BootstrapSceneManager.LoadGame();
     }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        // Falls der Client nicht der Host ist, UI-Element deaktivieren.
+        if (!IsHost)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

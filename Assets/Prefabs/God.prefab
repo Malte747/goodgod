@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bb47741ce1818458c168660816ee64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 7
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   mouseSensitivity: 200
   playerBody: {fileID: 5497837216490445985}
 --- !u!1 &2751442245872402382
@@ -315,9 +315,8 @@ GameObject:
   - component: {fileID: 4099907893136108200}
   - component: {fileID: 7862955489668741915}
   - component: {fileID: 1795132273196786038}
-  - component: {fileID: -1140275675427199636}
   m_Layer: 0
-  m_Name: Player
+  m_Name: God
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,11 +377,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebce3748a6b3c6e4f9ec0fdcf0003d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   _settings: {fileID: 11400000, guid: 3e6201eee52f3df449beb4198011fbec, type: 2}
-  currentSpeed: 0
   playerCamera: {fileID: 5401037182321611884}
 --- !u!114 &9097060019410715368
 MonoBehaviour:
@@ -396,9 +394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b4b5ca7d24543488166ef048caf7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   _enable: 1
   _amplitude: 0.0015
   _frequency: 10
@@ -416,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52977c4e04752b64daee7056549ab970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   body: {fileID: 4106978929009652174}
@@ -433,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f492967615d8f544a4d4532450f295f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
 --- !u!114 &7165920377728065559
@@ -448,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89222e7914601e943bb686c92cb87965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 4
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   objToSpawn: {fileID: 2063265470799536486, guid: 89309d4effcda48409a29ed0d3d26bca, type: 3}
@@ -470,11 +468,14 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
-  - {fileID: 0}
+  - {fileID: 2511309605756286061}
+  - {fileID: 9097060019410715368}
   - {fileID: 3265530294378493167}
   - {fileID: 2130926915744306224}
   - {fileID: 7165920377728065559}
   - {fileID: 7862955489668741915}
+  - {fileID: 0}
+  - {fileID: 8796043096497972867}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
@@ -500,9 +501,9 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 2
+  <PrefabId>k__BackingField: 0
   <SpawnableCollectionId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 7807759643866311769
+  <AssetPathHash>k__BackingField: 174423327011702163
   <SceneId>k__BackingField: 0
   SerializedTransformProperties:
     Position: {x: 0, y: 1.027, z: 0}
@@ -521,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 5
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   _componentConfiguration: 0
@@ -567,21 +568,6 @@ MonoBehaviour:
   _overrideType: 3
   _updateHostVisibility: 1
   _observerConditions: []
---- !u!114 &-1140275675427199636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147230335481884070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda726f0c15fcd84c8cd843a095775cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 255
-  _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
 --- !u!1 &7230488321718665409
 GameObject:
   m_ObjectHideFlags: 0

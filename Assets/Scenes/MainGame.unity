@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 135108691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.8, z: -34.8}
+  m_LocalPosition: {x: -22.83, y: 5.86, z: -16.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -670,12 +670,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cf8146ddabde14688737ca7f495982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4099907893136108200, guid: 98011b0fec628f44db35705de39e59be, type: 3}
-  spawnPoints:
-  - {fileID: 135108692}
+  disciplePrefab: {fileID: 4099907893136108200, guid: 98011b0fec628f44db35705de39e59be, type: 3}
+  godPrefab: {fileID: 4099907893136108200, guid: 2e902d2c6189ff4439da0a904f321b9e, type: 3}
+  satanPrefab: {fileID: 4099907893136108200, guid: 4be4f3bc7e106934cb2aeca8da65d3d4, type: 3}
+  spectatorPrefab: {fileID: 4099907893136108200, guid: 83d28b95a7a07314f95a142d3225d10d, type: 3}
+  discipleSpawnPoints:
   - {fileID: 1404719495}
   - {fileID: 706011227}
   - {fileID: 1609824988}
+  godSpawnPoints:
+  - {fileID: 135108692}
+  satanSpawnPoints:
+  - {fileID: 1404719495}
+  - {fileID: 706011227}
+  - {fileID: 1609824988}
+  spectatorSpawnPoints:
+  - {fileID: 1404719495}
+  - {fileID: 706011227}
+  - {fileID: 1609824988}
+  roleDistributions:
+  - playerCount: 1
+    godCount: 1
+    satanCount: 0
+    discipleCount: 0
+  - playerCount: 2
+    godCount: 1
+    satanCount: 1
+    discipleCount: 0
+  - playerCount: 3
+    godCount: 1
+    satanCount: 1
+    discipleCount: 1
+  - playerCount: 4
+    godCount: 1
+    satanCount: 1
+    discipleCount: 2
+  - playerCount: 5
+    godCount: 1
+    satanCount: 1
+    discipleCount: 3
+  - playerCount: 6
+    godCount: 1
+    satanCount: 1
+    discipleCount: 4
+  - playerCount: 7
+    godCount: 1
+    satanCount: 1
+    discipleCount: 5
+  - playerCount: 8
+    godCount: 1
+    satanCount: 2
+    discipleCount: 5
+  - playerCount: 9
+    godCount: 1
+    satanCount: 2
+    discipleCount: 6
+  - playerCount: 10
+    godCount: 1
+    satanCount: 2
+    discipleCount: 7
+  - playerCount: 11
+    godCount: 1
+    satanCount: 2
+    discipleCount: 8
+  - playerCount: 6
+    godCount: 1
+    satanCount: 1
+    discipleCount: 4
+  - playerCount: 6
+    godCount: 1
+    satanCount: 1
+    discipleCount: 4
+  - playerCount: 6
+    godCount: 1
+    satanCount: 1
+    discipleCount: 4
+  - playerCount: 6
+    godCount: 1
+    satanCount: 1
+    discipleCount: 4
 --- !u!1 &1223204523
 GameObject:
   m_ObjectHideFlags: 0

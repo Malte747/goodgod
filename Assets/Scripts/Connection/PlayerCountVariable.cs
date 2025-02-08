@@ -5,6 +5,7 @@ using FishNet.Object.Synchronizing;
 
 public class PlayerCountVariable : NetworkBehaviour
 {
+    ConnectionManager connectionManager;
     public static PlayerCountVariable Instance { get; private set; }
 
     public readonly SyncVar<int> PlayerCount = new SyncVar<int>(new SyncTypeSettings(1f)); // SyncVar mit Callback
@@ -15,6 +16,11 @@ public class PlayerCountVariable : NetworkBehaviour
     private void Awake()
     {
         PlayerCount.OnChange += on_player;
+    }
+
+    void Start()
+    {
+        connectionManager =  GameObject.Find("ConnectionManager").GetComponent<ConnectionManager>();
     }
 
 
@@ -38,6 +44,15 @@ public class PlayerCountVariable : NetworkBehaviour
     private void on_player(int prev, int next, bool asServer)
     {
         ChangeVariableText(next);
+        SetCurrentPlayerCount(next);
+    }
+
+    private void SetCurrentPlayerCount(int count)
+    {
+        if(connectionManager != null)
+        {
+        connectionManager.SetCurrentPlayerCount(count);
+        }
     }
 
 
