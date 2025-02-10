@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 4099907893136108200}
   - component: {fileID: 7862955489668741915}
   - component: {fileID: 1795132273196786038}
+  - component: {fileID: 4793298676960970331}
   m_Layer: 0
   m_Name: Spectator
   m_TagString: Untagged
@@ -568,6 +569,22 @@ MonoBehaviour:
   _overrideType: 3
   _updateHostVisibility: 1
   _observerConditions: []
+--- !u!114 &4793298676960970331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4235b8291cc43d24aa52f007356c97cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 0}
+  nameTagPrefab: {fileID: 1906533673738278883, guid: f006d41953ef7a14bb16589b56f6093f, type: 3}
 --- !u!1 &7230488321718665409
 GameObject:
   m_ObjectHideFlags: 0
