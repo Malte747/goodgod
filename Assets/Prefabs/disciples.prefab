@@ -308,8 +308,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5497837216490445985}
   - component: {fileID: 571648548974725141}
+  - component: {fileID: 464762906107996911}
   - component: {fileID: 6719128333587929837}
-  - component: {fileID: 2511309605756286061}
   - component: {fileID: 9097060019410715368}
   - component: {fileID: 3265530294378493167}
   - component: {fileID: 2130926915744306224}
@@ -366,6 +366,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &464762906107996911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c097314428b9a4da3fe87831706cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 0}
+  _settings: {fileID: 11400000, guid: 3e6201eee52f3df449beb4198011fbec, type: 2}
+  playerCamera: {fileID: 5401037182321611884}
+  hoverHeight: 5
+  hoverSmoothness: 5
 --- !u!114 &6719128333587929837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,23 +401,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 0}
   playerRole: Disciple
---- !u!114 &2511309605756286061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147230335481884070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebce3748a6b3c6e4f9ec0fdcf0003d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 4099907893136108200}
-  _settings: {fileID: 11400000, guid: 3e6201eee52f3df449beb4198011fbec, type: 2}
-  playerCamera: {fileID: 5401037182321611884}
 --- !u!114 &9097060019410715368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +487,7 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
-  - {fileID: 2511309605756286061}
+  - {fileID: 0}
   - {fileID: 9097060019410715368}
   - {fileID: 3265530294378493167}
   - {fileID: 2130926915744306224}

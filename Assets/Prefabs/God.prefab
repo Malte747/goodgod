@@ -398,11 +398,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5497837216490445985}
   - component: {fileID: 571648548974725141}
+  - component: {fileID: 248418594279713401}
   - component: {fileID: 3613905817552139333}
   - component: {fileID: 3265530294378493167}
   - component: {fileID: 2130926915744306224}
   - component: {fileID: 7165920377728065559}
-  - component: {fileID: 6190485299287523343}
   - component: {fileID: 4099907893136108200}
   - component: {fileID: 7862955489668741915}
   - component: {fileID: 1795132273196786038}
@@ -456,6 +456,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &248418594279713401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c097314428b9a4da3fe87831706cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 0}
+  _settings: {fileID: 11400000, guid: 3e6201eee52f3df449beb4198011fbec, type: 2}
+  playerCamera: {fileID: 5401037182321611884}
+  hoverHeight: 5
+  hoverSmoothness: 5
 --- !u!114 &3613905817552139333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,9 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4900900ce0bd3d84c8af61f2649486ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   playerRole: God
 --- !u!114 &3265530294378493167
 MonoBehaviour:
@@ -484,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52977c4e04752b64daee7056549ab970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   body: {fileID: 4106978929009652174}
@@ -501,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f492967615d8f544a4d4532450f295f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
 --- !u!114 &7165920377728065559
@@ -516,30 +535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89222e7914601e943bb686c92cb87965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   objToSpawn: {fileID: 2063265470799536486, guid: 89309d4effcda48409a29ed0d3d26bca, type: 3}
   spawnedObject: {fileID: 0}
---- !u!114 &6190485299287523343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147230335481884070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deebb5e186ec3a3489d1cfa4dd0f5ff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 255
-  _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
-  _settings: {fileID: 11400000, guid: 560662cc0ec560a4e9a5ca037a195640, type: 2}
-  playerCamera: {fileID: 5401037182321611884}
-  hoverHeight: 5
-  hoverSmoothness: 5
 --- !u!114 &4099907893136108200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,14 +557,12 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3613905817552139333}
   - {fileID: 3265530294378493167}
   - {fileID: 2130926915744306224}
   - {fileID: 7165920377728065559}
+  - {fileID: 0}
   - {fileID: 7862955489668741915}
-  - {fileID: 0}
-  - {fileID: 0}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}

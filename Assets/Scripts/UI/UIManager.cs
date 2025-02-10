@@ -2,45 +2,67 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("UI Elemente für verschiedene Rollen")]
-    [SerializeField] private GameObject godUI;
-    [SerializeField] private GameObject satanUI;
-    [SerializeField] private GameObject discipleUI;
-    [SerializeField] private GameObject spectatorUI;
+    [Header("UI Prefabs für verschiedene Rollen")]
+    [SerializeField] private GameObject godUIPrefab;
+    [SerializeField] private GameObject satanUIPrefab;
+    [SerializeField] private GameObject discipleUIPrefab;
+    [SerializeField] private GameObject spectatorUIPrefab;
 
-    public static UIManager Instance;
+    private GameObject currentUI; // Das individuelle UI für den Spieler
+
+    public static UIManager Instance { get; private set; }
 
     private void Awake()
     {
-        Instance = this;  // Singleton-Pattern
+        // Singleton erstellen, damit es zentral bleibt
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetUIForRole(string role)
     {
-        // Alle UI-Elemente deaktivieren
-        godUI.SetActive(false);
-        satanUI.SetActive(false);
-        discipleUI.SetActive(false);
-        spectatorUI.SetActive(false);
+        // Zentrales Canvas in der Szene suchen
+        GameObject globalCanvas = GameObject.Find("MainCanvas");
+        if (globalCanvas == null)
+        {
+            Debug.LogError("GlobalUI Canvas nicht gefunden!");
+            return;
+        }
 
-        // Entsprechendes UI-Element aktivieren
+        // Falls bereits eine UI existiert, lösche sie
+        if (currentUI != null)
+        {
+            Destroy(currentUI);
+        }
+
+        // Wähle das UI basierend auf der Rolle aus
+        GameObject selectedUIPrefab = null;
         switch (role)
         {
             case "God":
-                godUI.SetActive(true);
+                selectedUIPrefab = godUIPrefab;
                 break;
             case "Satan":
-                satanUI.SetActive(true);
+                selectedUIPrefab = satanUIPrefab;
                 break;
             case "Disciple":
-                discipleUI.SetActive(true);
+                selectedUIPrefab = discipleUIPrefab;
                 break;
             case "Spectator":
-                spectatorUI.SetActive(true);
+                selectedUIPrefab = spectatorUIPrefab;
                 break;
             default:
                 Debug.LogError("Unbekannte Rolle: " + role);
-                break;
+                return;
         }
+
+        // Erstelle die UI für die Rolle als Kind des GlobalUI Canvas
+        currentUI = Instantiate(selectedUIPrefab, globalCanvas.transform);
     }
 }

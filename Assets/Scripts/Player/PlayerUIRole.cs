@@ -1,17 +1,31 @@
 using UnityEngine;
 using FishNet.Connection;
 using FishNet.Object;
+using FishNet.Object;
+using System.Collections;
 
 public class PlayerUIRole : NetworkBehaviour
 {
-    [SerializeField] private string playerRole; // Diese Rolle wird beim Spawn zugewiesen
+    [SerializeField] public string playerRole; 
 
-    public override void OnStartClient()
+IEnumerator WaitForUIManager()
+{
+    while (UIManager.Instance == null)
     {
-        base.OnStartClient();
-        if (IsOwner) 
-        {
-            UIManager.Instance.SetUIForRole(playerRole);
-        }
+        yield return null;
     }
+
+    // Stelle sicher, dass nur die UI des lokalen Spielers geändert wird
+    if (IsOwner)
+    {
+        UIManager.Instance.SetUIForRole(playerRole);
+    }
+}
+
+public override void OnStartClient()
+{
+    base.OnStartClient();
+    StartCoroutine(WaitForUIManager());
+}
+
 }
