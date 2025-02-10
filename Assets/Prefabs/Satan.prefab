@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 4099907893136108200}
   - component: {fileID: 7862955489668741915}
   - component: {fileID: 1795132273196786038}
+  - component: {fileID: 1278931750280481593}
   m_Layer: 0
   m_Name: Satan
   m_TagString: Untagged
@@ -587,6 +588,22 @@ MonoBehaviour:
   _overrideType: 3
   _updateHostVisibility: 1
   _observerConditions: []
+--- !u!114 &1278931750280481593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4235b8291cc43d24aa52f007356c97cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 0}
+  nameTagPrefab: {fileID: 2804221702217748769, guid: f28bcaaf5973591478d144bb6d9a3c68, type: 3}
 --- !u!1 &7230488321718665409
 GameObject:
   m_ObjectHideFlags: 0
