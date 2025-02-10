@@ -1295,8 +1295,8 @@ MonoBehaviour:
   - {fileID: 135108692}
   roleDistributions:
   - playerCount: 1
-    godCount: 1
-    satanCount: 0
+    godCount: 0
+    satanCount: 1
     discipleCount: 0
   - playerCount: 2
     godCount: 1
