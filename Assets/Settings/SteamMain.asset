@@ -172,7 +172,7 @@ MonoBehaviour:
   isDebugging: 1
   server:
     autoInitialize: 1
-    autoLogon: 0
+    autoLogon: 1
     ip: 0
     queryPort: 27016
     gamePort: 27015

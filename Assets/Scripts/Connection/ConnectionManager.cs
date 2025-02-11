@@ -18,6 +18,7 @@ public class ConnectionManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if (instance != null && instance != this)
         {
             Destroy(gameObject);

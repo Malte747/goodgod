@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2859786263117413292}
   - component: {fileID: 8796043096497972867}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bb47741ce1818458c168660816ee64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 7
+  _componentIndexCache: 10
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   mouseSensitivity: 200
@@ -62,9 +62,9 @@ GameObject:
   - component: {fileID: 5401037182321611884}
   - component: {fileID: 6144123593226867928}
   - component: {fileID: 7844276135059791390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 3799575870931658055}
   - component: {fileID: 1313576181457136633}
   - component: {fileID: 3675585963246860815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 7954521299966195163}
   - component: {fileID: 6005583933633567050}
   - component: {fileID: 9097060019410715368}
+  - component: {fileID: -8755610008574875462}
   - component: {fileID: 3265530294378493167}
   - component: {fileID: 2130926915744306224}
   - component: {fileID: 7165920377728065559}
@@ -318,9 +319,10 @@ GameObject:
   - component: {fileID: 7862955489668741915}
   - component: {fileID: 1795132273196786038}
   - component: {fileID: 1278931750280481593}
-  m_Layer: 0
+  - component: {fileID: -2599388146376012823}
+  m_Layer: 3
   m_Name: Satan
-  m_TagString: Untagged
+  m_TagString: Satan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,9 +381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c097314428b9a4da3fe87831706cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   _settings: {fileID: 11400000, guid: 3e6201eee52f3df449beb4198011fbec, type: 2}
   playerCamera: {fileID: 5401037182321611884}
   hoverHeight: 5
@@ -398,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4900900ce0bd3d84c8af61f2649486ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   playerRole: Satan
@@ -422,6 +424,26 @@ MonoBehaviour:
   _frequency: 10
   _camera: {fileID: 7361038522174993454}
   _cameraHolder: {fileID: 2859786263117413292}
+--- !u!114 &-8755610008574875462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c28c447a43d5cf4a87d975edf450b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 4099907893136108200}
+  interactDistance: 3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 136
+  playerCamera: {fileID: 5401037182321611884}
 --- !u!114 &3265530294378493167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52977c4e04752b64daee7056549ab970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 4
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   body: {fileID: 4106978929009652174}
@@ -451,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f492967615d8f544a4d4532450f295f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 5
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
 --- !u!114 &7165920377728065559
@@ -466,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89222e7914601e943bb686c92cb87965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 5
+  _componentIndexCache: 6
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   objToSpawn: {fileID: 2063265470799536486, guid: 89309d4effcda48409a29ed0d3d26bca, type: 3}
@@ -488,13 +510,16 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
+  - {fileID: 7954521299966195163}
   - {fileID: 6005583933633567050}
-  - {fileID: 0}
   - {fileID: 9097060019410715368}
+  - {fileID: -8755610008574875462}
   - {fileID: 3265530294378493167}
   - {fileID: 2130926915744306224}
   - {fileID: 7165920377728065559}
   - {fileID: 7862955489668741915}
+  - {fileID: 1278931750280481593}
+  - {fileID: -2599388146376012823}
   - {fileID: 8796043096497972867}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
@@ -542,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 6
+  _componentIndexCache: 7
   _addedNetworkObject: {fileID: 4099907893136108200}
   _networkObjectCache: {fileID: 4099907893136108200}
   _componentConfiguration: 0
@@ -600,10 +625,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4235b8291cc43d24aa52f007356c97cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 8
   _addedNetworkObject: {fileID: 4099907893136108200}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 4099907893136108200}
   nameTagPrefab: {fileID: 2804221702217748769, guid: f28bcaaf5973591478d144bb6d9a3c68, type: 3}
+--- !u!114 &-2599388146376012823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147230335481884070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d15fbd17b6aa05409aada1661fa612a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 9
+  _addedNetworkObject: {fileID: 4099907893136108200}
+  _networkObjectCache: {fileID: 4099907893136108200}
 --- !u!1 &7230488321718665409
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +656,7 @@ GameObject:
   - component: {fileID: 6237803446794666996}
   - component: {fileID: 1384966088318581064}
   - component: {fileID: 1690856712408742081}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visors
   m_TagString: Untagged
   m_Icon: {fileID: 0}

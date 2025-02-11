@@ -15,6 +15,7 @@ public class PlayerCountManager : NetworkBehaviour
             // Erhöhe die Spieleranzahl, wenn ein Client startet
             PlayerCountVariable.Instance?.IncreasePlayerCount();
         }
+        
     }
 
     public override void OnStopClient()
